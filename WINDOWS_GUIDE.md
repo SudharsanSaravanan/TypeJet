@@ -9,7 +9,7 @@ This guide provides instructions for setting up, compiling, and running the `typ
 To compile and run this project on Windows, you will need:
 
 1. **Python 3.8+**: Ensure Python is added to your system `PATH`.
-2. **Rust & Cargo**: Standard Rust toolchain (recommended to install via [rustup.rs](https://rustup.rs/)).
+2. **Rust & Cargo**: Standard Rust toolchain (recommended to install via [rustup.rs](https://rustup.rs/).
 3. **C++ Build Tools**: Required by Rust's MSVC compiler (normally installed via Visual Studio Build Tools).
 
 ---
