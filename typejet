@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import pyperclip
+import typejet
+
+MODE = "code" # For editors that have intellisense enabled
+
+clipboard_content = pyperclip.paste()
+
+if MODE == "code":
+	lines = clipboard_content.split("\n")
+	for i in range(len(lines)):
+		lines[i] = lines[i].strip()
+	clipboard_content = "\n".join(lines)
+
+typejet.type_text(clipboard_content, min_char_delay=0.002, max_char_delay=0.003)
