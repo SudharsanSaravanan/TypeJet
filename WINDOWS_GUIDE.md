@@ -4,24 +4,6 @@ This guide provides instructions for setting up, compiling, and running the `typ
 
 ---
 
-## 🚀 Architecture Overview
-
-TypeJet uses a hybrid Rust/Python architecture to achieve near-instantaneous, hardware-level keyboard simulation. 
-
-```mermaid
-graph TD
-    A[Clipboard / CLI Input] --> B[typejet_cli.py CLI Wrapper]
-    B --> C[pyo3 Bindings]
-    C --> D[typejet Rust Library]
-    D --> E{Operating System}
-    E -->|Windows| F[Win32 SendInput API]
-    E -->|Linux| G[/dev/uinput Kernel Device]
-    F --> H[Target Application Editor/Console]
-    G --> H
-```
-
----
-
 ## 📋 Prerequisites
 
 To compile and run this project on Windows, you will need:
